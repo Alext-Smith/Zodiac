@@ -37,6 +37,22 @@ def enter_star_sign():
     return chosen_sign
 
 def zodiac_info(sign):
+    dates = {
+        "Aries": "March 21 - April 19",
+        "Taurus": "April 20 - May 20",
+        "Gemini": "May 21 - June 20",
+        "Cancer": "June 21 - July 22",
+        "Leo": "July 23 - August 22",
+        "Virgo": "August 23 - September 22",
+        "Libra": "September 23 - October 22",
+        "Scorpio": "October 23 - November 21",
+        "Sagittarius": "November 22 - December 21",
+        "Capricorn": "December 22 - January 19",
+        "Aquarius": "January 20 - February 18",
+        "Pisces": "February 19 - March 20"
+    }
+
+
     if sign == "Aries":
         print("Symbol: ♈ Ram")
         print("Element: Fire")
@@ -85,7 +101,7 @@ def zodiac_info(sign):
         print("Symbol: ♓ Fish")
         print("Element: Water")
         print("Info: Compassionate and intuitive, Pisces is deeply imaginative and empathetic.")
-
+    print(f"Dates: {sign} is from {dates[sign]}")
 def find_month():
     month= get_choice(
     "What  Month were you born in? ",
@@ -107,7 +123,7 @@ def find_day(month):
         try:
             day = int(input(f"Please enter what date in {month} you were born on: "))
             if 1 <= day <= max_day:
-              print(f"This looks correct you were born on the {day}, {month}")
+              print(f"This looks correct, you were born on the {day}, {month}")
               return day
             else :
               print("this doesn't look like a valid date. Please try again.")
